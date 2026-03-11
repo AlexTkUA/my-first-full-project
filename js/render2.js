@@ -37,15 +37,15 @@ document.addEventListener("DOMContentLoaded", () => {
             //Створення всіх елементів компонента Card
             const item = createDOMElement("a", "headphone_section_cards_item", {
                 //передаємо id карточки в get параметр через url адресу 
-                href: `../product/index.html?id=0${card.id}`
+                href: `product/index.html?id=0${card.id}`
             })
             const likeElement = createDOMElement("div", "liked_img")
             const unfavorite = createDOMElement("img", "heart", {
-                src: "../../assets/icon/unfavorite.svg"
+                src: "assets/icon/unfavorite.svg"
             })
             const itemPhoto = createDOMElement("div" , "headphone_section_cards_item_img")
             const photoImg = createDOMElement("img", null, {
-                src: `../../assets/img/${card.photo[0]}`,
+                src: `assets/img/${card.photo[0]}`,
             })
             const itemInfo = createDOMElement("div", "headphone_section_cards_item_info")
             const itemModel = createDOMElement("h3", "headphone_section_cards_item_info_model", null, card.name);
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const previousPrice = createDOMElement("span", "previous-price", null, card.discount + " грн")
             const ratingBlock = createDOMElement("div", "headphone_section_cards_item_rating")
             const ratingImg = createDOMElement("img", null, {
-                src: "../../assets/icon/star.svg",
+                src: "assets/icon/star.svg",
             })
             const ratingNumber = createDOMElement("span" , "headphone_section_cards_item_rating_number", null, card.rating)
 
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const getData = (url) => {
         return fetch(url).then(res => res.json());
     }
-    getData("/data/product.json").then((data) => {
+    getData("data/product.json").then((data) => {
         createCardsGrid(data, "[data-js-headphone-cards]", 6)
     })
 
@@ -110,9 +110,9 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
-    toggleLike("[data-js-headphone-cards]", "../../assets/icon/favorite.png", "../../assets/icon/unfavorite.svg")
+    toggleLike("[data-js-headphone-cards]", "assets/icon/favorite.png", "assets/icon/unfavorite.svg")
    
-    getData("/data/wireless.json").
+    getData("data/wireless.json").
     then((data) => {
         createCardsGrid(data, "[data-js-wireless-headphone]", 3)
     });

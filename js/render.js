@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const getData = (url) => {
         return fetch(url).then(res => res.json());
     }
-    getData(dataPath + "data/product.json").then((data) => {
+    getData("../../data/product.json").then((data) => {
         createCardsGrid(data, "[data-js-headphone-cards]", 6)
     })
 
@@ -118,9 +118,9 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
-    toggleLike("[data-js-headphone-cards]", dataPath + "assets/icon/favorite.png", dataPath + "assets/icon/unfavorite.svg")
+    toggleLike("[data-js-headphone-cards]","../../assets/icon/favorite.png", "../../assets/icon/unfavorite.svg")
    
-    getData(dataPath + "data/wireless.json").
+    getData("../../data/wireless.json").
     then((data) => {
         createCardsGrid(data, "[data-js-wireless-headphone]", 3)
     });
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (event.target.tagName === "BUTTON") {
                 brand = target.getAttribute("data-js-brand").toLowerCase().trim();
             }
-            getData(dataPath + "data/product.json").then(products => {
+            getData("../../data/product.json").then(products => {
                 let newArr = []
                 products.forEach(el => {
                     if (el.brand.toLowerCase().trim() === brand) {
@@ -170,11 +170,11 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
     renderFiltratedProductsList();
-    getData(dataPath + "data/accessories.json").then(data => {
+    getData("../../data/accessories.json").then(data => {
         renderListCategory(data, ".catalog_menu");
     })
 
-    getData(dataPath + "data/product.json").then(product => {
+    getData("../../data/product.json").then(product => {
         createCardsGrid(product, ".catalog_cards", 10);
     })
 
