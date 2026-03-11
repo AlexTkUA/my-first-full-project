@@ -72,7 +72,7 @@ const validationForm = (form, cartObject, deliveryPrice) => {
         totalPrice += deliveryPrice
         formData.append("totalPrice", totalPrice);
         formData.append("orderCode", orderCode);
-        window.location.href = `my-first-full-project/pages/order-success/index.html?orderCode=${orderCode}`;
+        window.location.href = `/pages/order-success/index.html?orderCode=${orderCode}`;
     })
 }
 export default validationForm;
