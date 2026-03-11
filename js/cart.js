@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class = "cart_img"><img src="/assets/img/curt.svg" alt=""></div>
             <h2 class = "cart_title">Корзина пуста</h2>
             <span class = "cart_subtitle">Но это никогда не поздно исправить :)</span>
-            <a class = "cart_btn" href="/pages/catalog/index.html">В каталог товаров</a>`
+            <a class = "cart_btn" href="../catalog/index.html">В каталог товаров</a>`
     }
 
     const createFullCart = (cartList, products, placeHolder) => {
@@ -44,12 +44,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 html += `
                     <div class="cart_item">
                         <div data-id = '${product.id}' class="trashBox">
-                            <img src="/assets/icon/trashBasket.svg" alt="">
+                            <img src="../../assets/icon/trashBasket.svg" alt="">
                         </div>
 
                         <div class="cart_item_info">
                             <div class="cart_item_info_photo">
-                                <img src="/assets/img/${product.photo[0]}" alt="">
+                                <img src="../../assets/img/${product.photo[0]}" alt="">
                             </div>
 
                             <div class="cart_item_info_text">
@@ -61,13 +61,13 @@ document.addEventListener("DOMContentLoaded", () => {
                         <div class="cart_item_counter">
                             <div class="flex-wrapper">
                                 <div data-id = '${product.id}' class="cart_item_counter_minus">
-                                    <img src="/assets/icon/minus.svg" alt="">
+                                    <img src="../../assets/icon/minus.svg" alt="">
                                 </div>
 
                                 <span class="cart_item_counter_amount">${amount}</span>
 
                                 <div data-id = '${product.id}' class="cart_item_counter_plus">
-                                    <img src="/assets/icon/plus.svg" alt="">
+                                    <img src="../../assets/icon/plus.svg" alt="">
                                 </div>
                             </div>
 
@@ -84,12 +84,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 <span>ИТОГО</span>
                 <span>${allTotalPrice}</span>
             </div>
-            <a class = "cart_orderBlock_btn" href="/pages/order/index.html?cart=${cartStr}">Перейти к оформлению</a>
+            <a class = "cart_orderBlock_btn" href="../order/index.html?cart=${cartStr}">Перейти к оформлению</a>
         </div>`
         cartField.innerHTML = html;
     } 
     
-    fetch("/data/product.json").then(res => res.json()).then(data => {
+    fetch("../data/product.json").then(res => res.json()).then(data => {
         allProducts = data;
         createFullCart(cartList, allProducts, ".cart_container")
         })

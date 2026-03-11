@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             place.innerHTML = html;
     }
 
-    fetch("/data/product.json").
+    fetch("../data/product.json").
     then(res => res.json()).
     then((data) => {
         const product = data.find(p => p.id == idParam);
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         if (!place) {
             return
         }
-        place.innerHTML = `<a data-cart-btn href = "../../pages/cart/index.html" data-buy-id = ${id} class = "main_btn mb18">Купить!</a>
+        place.innerHTML = `<a data-cart-btn href = "../cart/index.html" data-buy-id = ${id} class = "main_btn mb18">Купить!</a>
                     <button data-cart-btn data-buy-id = ${id} class = "main_btn">Добавить в корзину</button>`;
 
     }
