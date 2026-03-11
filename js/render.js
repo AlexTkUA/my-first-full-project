@@ -1,6 +1,14 @@
 "use strict";
 document.addEventListener("DOMContentLoaded", () => {
-
+        let dataPath;
+        const page = window.location.pathname.split("/").pop();
+        if (page === "" || page === "index.html") {
+        // Головна сторінка в корені
+        dataPath = "";
+        } else {
+        // Сторінка в папці, наприклад pages/catalog
+        dataPath = "../../";
+        }
     //Функція для створення DOM елемента
     const createDOMElement = (tag, classes, attributes, text) => {
         const newElement = document.createElement(tag);
@@ -83,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const getData = (url) => {
         return fetch(url).then(res => res.json());
     }
-    getData("../../data/product.json").then((data) => {
+    getData(dataPath + "data/product.json").then((data) => {
         createCardsGrid(data, "[data-js-headphone-cards]", 6)
     })
 
@@ -110,9 +118,9 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
-    toggleLike("[data-js-headphone-cards]", "../../assets/icon/favorite.png", "../../assets/icon/unfavorite.svg")
+    toggleLike("[data-js-headphone-cards]", dataPath + "assets/icon/favorite.png", dataPath + "assets/icon/unfavorite.svg")
    
-    getData("../../data/wireless.json").
+    getData(dataPath + "data/wireless.json").
     then((data) => {
         createCardsGrid(data, "[data-js-wireless-headphone]", 3)
     });
@@ -150,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (event.target.tagName === "BUTTON") {
                 brand = target.getAttribute("data-js-brand").toLowerCase().trim();
             }
-            getData("../../data/product.json").then(products => {
+            getData(dataPath + "data/product.json").then(products => {
                 let newArr = []
                 products.forEach(el => {
                     if (el.brand.toLowerCase().trim() === brand) {
@@ -162,11 +170,11 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
     renderFiltratedProductsList();
-    getData("../../data/accessories.json").then(data => {
+    getData(dataPath + "data/accessories.json").then(data => {
         renderListCategory(data, ".catalog_menu");
     })
 
-    getData("../../data/product.json").then(product => {
+    getData(dataPath + "data/product.json").then(product => {
         createCardsGrid(product, ".catalog_cards", 10);
     })
 

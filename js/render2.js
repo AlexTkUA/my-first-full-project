@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const getData = (url) => {
         return fetch(url).then(res => res.json());
     }
-    getData("../data/product.json").then((data) => {
+    getData("/data/product.json").then((data) => {
         createCardsGrid(data, "[data-js-headphone-cards]", 6)
     })
 
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     toggleLike("[data-js-headphone-cards]", "../../assets/icon/favorite.png", "../../assets/icon/unfavorite.svg")
    
-    getData("../data/wireless.json").
+    getData("/data/wireless.json").
     then((data) => {
         createCardsGrid(data, "[data-js-wireless-headphone]", 3)
     });
