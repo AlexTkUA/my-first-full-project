@@ -1,0 +1,67 @@
+[
+  {
+    "brand": "Apple",
+    "models": [
+      "iPhone 12",
+      "iPhone 12 Max",
+      "iPhone 13",
+      "iPhone 13 Max",
+      "iPhone 13 Pro Max"
+    ]
+  },
+  {
+    "brand": "Nokia",
+    "models": [
+      "Nokia G21",
+      "Nokia X30",
+      "Nokia 2660"
+    ]
+  },
+  {
+    "brand": "Oppo",
+    "models": [
+      "Oppo A57",
+      "Oppo Reno 8",
+      "Oppo Find X5"
+    ]
+  },
+  {
+    "brand": "Xiaomi",
+    "models": [
+      "Xiaomi Redmi Note 12",
+      "Xiaomi 13",
+      "Xiaomi Poco X5"
+    ]
+  },
+  {
+    "brand": "Realme",
+    "models": [
+      "Realme C55",
+      "Realme 11 Pro",
+      "Realme GT 2"
+    ]
+  },
+  {
+    "brand": "Samsung",
+    "models": [
+      "Samsung Galaxy A54",
+      "Samsung Galaxy S23",
+      "Samsung Galaxy Z Fold5"
+    ]
+  },
+  {
+    "brand": "Sony",
+    "models": [
+      "Sony Xperia 10 V",
+      "Sony Xperia 1 V"
+    ]
+  },
+  {
+    "brand": "Vivo",
+    "models": [
+      "Vivo Y35",
+      "Vivo V27",
+      "Vivo X90"
+    ]
+  }
+]

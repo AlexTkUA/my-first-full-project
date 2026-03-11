@@ -1,0 +1,35 @@
+[
+  {
+    "id": "1",
+    "name": "Apple AirPods Pro 2",
+    "price": 8999,
+    "discount": 10999,
+    "isDiscount": true,
+    "rating": 4.9,
+    "photo": ["airpods2.png", "airpods1.png","airpods3.png", "airpods4.png"],
+    "isLiked": false,
+    "category": "Навушники"
+  },
+  {
+    "id": "3",
+    "name": "JBL Tune 760NC",
+    "price": 3499,
+    "discount": 0,
+    "isDiscount": false,
+    "rating": 4.5,
+    "photo": ["BOROFONEBO4.png", "earbods1.png", "earbods2.png"],
+    "isLiked": false,
+    "category": "Навушники"
+  },
+  {
+    "id": "6",
+    "name": "Marshall Major IV",
+    "price": 5599,
+    "discount": 0,
+    "isDiscount": false,
+    "rating": 4.7,
+    "photo": ["headphone4.png", "headphone5.png"],
+    "isLiked": false,
+    "category": "Навушники"
+  }
+]
