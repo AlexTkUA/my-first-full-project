@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         placeHtml.classList.add("flex-col");
         placeHtml.innerHTML = `
-            <div class = "cart_img"><img src="/assets/img/curt.svg" alt=""></div>
+            <div class = "cart_img"><img src="../../assets/img/curt.svg" alt=""></div>
             <h2 class = "cart_title">Корзина пуста</h2>
             <span class = "cart_subtitle">Но это никогда не поздно исправить :)</span>
             <a class = "cart_btn" href="../catalog/index.html">В каталог товаров</a>`
