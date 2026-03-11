@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const previousPrice = createDOMElement("span", "previous-price", null, card.discount + " грн")
             const ratingBlock = createDOMElement("div", "headphone_section_cards_item_rating")
             const ratingImg = createDOMElement("img", null, {
-                src: "../assets/icon/star.svg",
+                src: "../../assets/icon/star.svg",
             })
             const ratingNumber = createDOMElement("span" , "headphone_section_cards_item_rating_number", null, card.rating)
 
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const getData = (url) => {
         return fetch(url).then(res => res.json());
     }
-    getData("../data/product.json").then((data) => {
+    getData("../../data/product.json").then((data) => {
         createCardsGrid(data, "[data-js-headphone-cards]", 6)
     })
 
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     toggleLike("[data-js-headphone-cards]", "../../assets/icon/favorite.png", "../../assets/icon/unfavorite.svg")
    
-    getData("../data/wireless.json").
+    getData("../../data/wireless.json").
     then((data) => {
         createCardsGrid(data, "[data-js-wireless-headphone]", 3)
     });
@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (event.target.tagName === "BUTTON") {
                 brand = target.getAttribute("data-js-brand").toLowerCase().trim();
             }
-            getData("../data/product.json").then(products => {
+            getData("../../data/product.json").then(products => {
                 let newArr = []
                 products.forEach(el => {
                     if (el.brand.toLowerCase().trim() === brand) {
@@ -162,11 +162,11 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
     renderFiltratedProductsList();
-    getData("../data/accessories.json").then(data => {
+    getData("../../data/accessories.json").then(data => {
         renderListCategory(data, ".catalog_menu");
     })
 
-    getData("../data/product.json").then(product => {
+    getData("../../data/product.json").then(product => {
         createCardsGrid(product, ".catalog_cards", 10);
     })
 

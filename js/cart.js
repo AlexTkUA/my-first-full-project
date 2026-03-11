@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
         cartField.innerHTML = html;
     } 
     
-    fetch("../data/product.json").then(res => res.json()).then(data => {
+    fetch("../../data/product.json").then(res => res.json()).then(data => {
         allProducts = data;
         createFullCart(cartList, allProducts, ".cart_container")
         })

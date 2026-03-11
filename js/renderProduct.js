@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             place.innerHTML = html;
     }
 
-    fetch("../data/product.json").
+    fetch("../../data/product.json").
     then(res => res.json()).
     then((data) => {
         const product = data.find(p => p.id == idParam);
