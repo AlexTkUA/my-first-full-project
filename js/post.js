@@ -72,6 +72,7 @@ const validationForm = (form, cartObject, deliveryPrice) => {
         totalPrice += deliveryPrice
         formData.append("totalPrice", totalPrice);
         formData.append("orderCode", orderCode);
+        localStorage.setItem("cart", "");
         window.location.href = `/my-first-full-project/pages/order-success/index.html?orderCode=${orderCode}`;
     })
 }
