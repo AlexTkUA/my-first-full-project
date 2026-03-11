@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const renderGallery = (product) => {
     let list = "";
     product.photo.forEach(photo => {
-        list += `<div class = "product_info_gallery_img"><img src="../../assets/img/${photo}" alt=""></div>`
+        list += `<div class = "product_info_gallery_img"><img src="./assets/img/${photo}" alt=""></div>`
     })
     return list;
 }
