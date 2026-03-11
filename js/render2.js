@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
             //Створення всіх елементів компонента Card
             const item = createDOMElement("a", "headphone_section_cards_item", {
                 //передаємо id карточки в get параметр через url адресу 
-                href: `product/index.html?id=0${card.id}`
+                href: `pages/product/index.html?id=0${card.id}`
             })
             const likeElement = createDOMElement("div", "liked_img")
             const unfavorite = createDOMElement("img", "heart", {
