@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const renderGallery = (product) => {
     let list = "";
     product.photo.forEach(photo => {
-        list += `<div class = "product_info_gallery_img"><img src="./assets/img/${photo}" alt=""></div>`
+        list += `<div class = "product_info_gallery_img"><img src="../../assets/img/${photo}" alt=""></div>`
     })
     return list;
 }
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         if (!place) {
             return
         }
-        place.innerHTML = `<a data-cart-btn href = "/pages/cart/index.html" data-buy-id = ${id} class = "main_btn mb18">Купить!</a>
+        place.innerHTML = `<a data-cart-btn href = "../../pages/cart/index.html" data-buy-id = ${id} class = "main_btn mb18">Купить!</a>
                     <button data-cart-btn data-buy-id = ${id} class = "main_btn">Добавить в корзину</button>`;
 
     }
