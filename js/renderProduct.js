@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     const renderListCharacteristics = (product, handler) => {
         const place = document.querySelector(handler);
+        if (!place) {
+            return
+        }
         product.characteristics.forEach(el => {
             place.innerHTML += `<li>${el}</li>`
         })
@@ -13,7 +16,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     const toggleFlexBox = (product, boxContainer) => {
         const box = document.querySelector(boxContainer);
-        if (!box || !product?.photo) return;
+        if (!box || !product.photo) return;
         if (product.photo.length <= 2) {
             box.classList.add("jcleft")
         }
@@ -26,15 +29,21 @@ document.addEventListener("DOMContentLoaded", ()=>{
     }
 
     const renderGallery = (product) => {
-    let list = "";
-    product.photo.forEach(photo => {
-        list += `<div class = "product_info_gallery_img"><img src="../../assets/img/${photo}" alt=""></div>`
-    })
-    return list;
-}
+        let list = "";
+        if (!product) {
+            return
+        }
+        product.photo.forEach(photo => {
+            list += `<div class = "product_info_gallery_img"><img src="../../assets/img/${photo}" alt=""></div>`
+        })
+        return list;
+    }
 
     const renderPromoProduct = (product, handler) => {
         const place = document.querySelector(handler);
+        if (!place) {
+            return;
+        }
         let priceBlock = null;
             if (product.isDiscount) {
                 priceBlock = `<span>${product.price}</span>
@@ -70,7 +79,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         if (!place) {
             return
         }
-        place.innerHTML = `<a data-cart-btn href = "../cart/index.html" data-buy-id = ${id} class = "main_btn mb18">Купить!</a>
+        place.innerHTML = `<a data-cart-btn href = "../cart/index.html" data-buy-id = ${id} class = "media_btn main_btn mb18">    <img class = "hidden_basket" src="../../assets/icon/basket.svg" alt=""><span class = "spanBtn">Купить!</span></a>
                     <button data-cart-btn data-buy-id = ${id} class = "main_btn">Добавить в корзину</button>`;
 
     }
