@@ -177,35 +177,4 @@ document.addEventListener("DOMContentLoaded", () => {
     getData("../../data/product.json").then(product => {
         createCardsGrid(product, ".catalog_cards", 10);
     })
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 })
