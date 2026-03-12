@@ -104,4 +104,16 @@
     .catalog_cards {
         justify-content: center;
     }
+    .main_mapMessengers {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .main_mapMessengers_mapBox {
+        width: 100%;
+    }
+    .main_mapMessengers_messengersBox {
+        flex-direction: row;
+        justify-content: center;
+    }
 }
